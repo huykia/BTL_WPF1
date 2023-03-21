@@ -1,0 +1,17 @@
+﻿<Window x:Class="BTL_WPF.Bingo3x3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Bingo3x3" Height="400" Width="500" Loaded="Window_Loaded" >
+    <Grid>
+        <Grid x:Name="myGrid" Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Text="Random Number :" FontSize="20" Width="170" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="258,10,0,0"  ></TextBlock>
+        <TextBlock x:Name="tbl2" FontSize="20" Width="50" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="433,10,0,0" ></TextBlock>
+        <TextBlock Text="Bingo!!" FontSize="20" Width="60" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="291,129,0,0"  ></TextBlock>
+        <Button x:Name="click" Width="50" Height="50" Content="Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="click_Click"></Button>
+        <TextBlock Text="Count Click :" FontSize="20" Width="122" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="261,45,0,0"></TextBlock>
+        <TextBlock x:Name="tbl1" FontSize="20" Width="50" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="383,45,0,0"></TextBlock>
+    </Grid>
+</Window>
