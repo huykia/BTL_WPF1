@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,6 +22,7 @@ namespace BTL_WPF
     {
         int count = 0;
         bool bingo = false;
+        bool bingo2 = false;
         public Bingo5x5() => InitializeComponent();
         private List<List<Button>> matrix;
         public List<List<Button>> Matrix
@@ -72,6 +74,14 @@ namespace BTL_WPF
         private void EndGame()
         {
             tbl3.Text = "BingGo!!";
+            
+            MediaPlayer player = new MediaPlayer();
+            player.Close();
+            player.Open(new Uri("C:\\Users\\huyng\\Documents\\Bt\\BTL_WPF\\BTL_WPF\\sound\\Tieng-vo-tay-tra-loi-dung-www_tiengdong_com.mp3", UriKind.Relative));
+            player.Play();
+            click.Content = ("Reset");
+            bingo2 = true;
+
         }
 
         private Point GetPoint(Button button)
@@ -213,6 +223,7 @@ namespace BTL_WPF
             }
             if (isEndGame(button))
             {
+             
                 EndGame();
             }
 
@@ -224,17 +235,21 @@ namespace BTL_WPF
             tbl1.Text = count.ToString();
             int n = new Random().Next(0, 10);
             tbl2.Text = n.ToString();
+            MediaPlayer player = new MediaPlayer();
+            player.Open(new Uri("C:\\Users\\huyng\\Documents\\Bt\\BTL_WPF\\BTL_WPF\\sound\\Tieng-lac-xuc-xac.mp3", UriKind.Relative));
+            player.Play();
             if (count == 20)
             {
                 tbl3.Text = "Ban Thua !";
 
                 click.Content = ("Reset");
             }
-            if (count == 21)
+            if (count == 21 || bingo2)
             {
                 Bingo5x5 q = new Bingo5x5();
                 q.Show();
                 Close();
+                player.Close();
             }
         }
     }
