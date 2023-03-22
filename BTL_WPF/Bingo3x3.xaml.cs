@@ -222,6 +222,18 @@ namespace BTL_WPF
             tbl1.Text = count.ToString();
             int n = new Random().Next(0, 10);
             tbl2.Text = n.ToString();
+            if (count == 20)
+            {
+                tbl3.Text = "Ban Thua !";
+
+                click.Content = ("Reset");
+            }
+            if(count ==21)
+            {
+                Bingo3x3 q = new Bingo3x3();
+                q.Show();
+                Close();
+            }
         }
     }
 }

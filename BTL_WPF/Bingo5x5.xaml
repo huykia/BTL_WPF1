@@ -13,6 +13,6 @@
         <TextBlock x:Name="tbl3" FontSize="20" Width="100" FontWeight="Bold" Height="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="291,129,0,0"  ></TextBlock>
         <TextBlock Text="Count Click :" FontSize="20" Width="122" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="258,45,0,0"></TextBlock>
         <TextBlock x:Name="tbl1" FontSize="20" Width="50" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="380,45,0,0"></TextBlock>
-        <Button x:Name="click" Width="50" Height="50" Content="Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="click_Click"></Button>
+        <Button x:Name="click" Width="98" Height="50" Content="Click" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="click_Click" Background="#FF6BF027" Margin="330,0,0,38" FontWeight="Bold" FontSize="20"></Button>
     </Grid>
 </Window>
