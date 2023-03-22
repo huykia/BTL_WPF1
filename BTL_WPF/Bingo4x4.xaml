@@ -10,7 +10,7 @@
         <Grid x:Name="myGrid" Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <TextBlock Text="Random Number :" FontSize="20" Width="170" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="258,10,0,0"  ></TextBlock>
         <TextBlock x:Name="tbl2" FontSize="20" Width="50" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="433,10,0,0" ></TextBlock>
-        <TextBlock Text="Bingo!!" FontSize="20" Width="60" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="291,129,0,0"  ></TextBlock>
+        <TextBlock x:Name="tbl3" FontSize="20" Width="100" FontWeight="Bold" Height="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="291,129,0,0"  ></TextBlock>
         <Button x:Name="click" Width="50" Height="50" Content="Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="click_Click"></Button>
         <TextBlock Text="Count Click :" FontSize="20" Width="122" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="258,45,0,0"></TextBlock>
         <TextBlock x:Name="tbl1" FontSize="20" Width="50" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="380,45,0,0" RenderTransformOrigin="0.17,0.596"></TextBlock>
