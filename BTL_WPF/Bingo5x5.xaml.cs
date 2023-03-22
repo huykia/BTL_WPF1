@@ -55,6 +55,8 @@ namespace BTL_WPF
                     myButton.Content = n;
                     Grid.SetRow(myButton, row);
                     Grid.SetColumn(myButton, col);
+                    myButton.FontWeight = FontWeights.Bold;
+                    myButton.FontSize = 20;
                     myButton.Click += btn_Click;
                     myButton.Tag = row.ToString();
                     myGrid.Children.Add(myButton);
