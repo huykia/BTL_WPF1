@@ -22,7 +22,7 @@ namespace BTL_WPF
     public partial class Bingo3x3 : Window
     {
 
-        int count = 0;
+        int count = 11;
         bool bingo = false;
         bool bingo2 = false;
         public Bingo3x3() => InitializeComponent();
@@ -232,20 +232,22 @@ namespace BTL_WPF
 
         private void click_Click(object sender, RoutedEventArgs e)
         {
-            count++;
+            count--;
             tbl1.Text = count.ToString();
             int n = new Random().Next(0, 10);
             tbl2.Text = n.ToString();
             player.Close();
             player.Open(new Uri("C:\\Users\\huyng\\Documents\\Bt\\BTL_WPF\\BTL_WPF\\sound\\Tieng-lac-xuc-xac.mp3", UriKind.Relative));
             player.Play();
-            if (count == 20)
+            if (count == 0)
             {
-                tbl3.Text = "Ban Thua !";
-
+                if (!bingo2)
+                {
+                    tbl3.Text = "Ban Thua !";
+                }
                 click.Content = ("Reset");
             }
-            if(count ==21 || bingo2)
+            if (count < 0 || bingo2)
             {
                 player.Close();
                 Bingo3x3 q = new Bingo3x3();
