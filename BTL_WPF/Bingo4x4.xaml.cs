@@ -16,6 +16,7 @@ namespace BTL_WPF
         bool bingo2 = false;
         public Bingo4x4() => InitializeComponent();
         private List<List<Button>> matrix;
+        MediaPlayer player = new MediaPlayer();
         public List<List<Button>> Matrix
         {
             get { return matrix; }
@@ -65,7 +66,6 @@ namespace BTL_WPF
         private void EndGame()
         {
             tbl3.Text = "BingGo!!";
-            MediaPlayer player = new MediaPlayer();
             player.Close();
             player.Open(new Uri("C:\\Users\\huyng\\Documents\\Bt\\BTL_WPF\\BTL_WPF\\sound\\Tieng-vo-tay-tra-loi-dung-www_tiengdong_com.mp3", UriKind.Relative));
             player.Play();
@@ -223,7 +223,7 @@ namespace BTL_WPF
             tbl1.Text = count.ToString();
             int n = new Random().Next(0, 10);
             tbl2.Text = n.ToString();
-            MediaPlayer player = new MediaPlayer();
+            player.Close();
             player.Open(new Uri("C:\\Users\\huyng\\Documents\\Bt\\BTL_WPF\\BTL_WPF\\sound\\Tieng-lac-xuc-xac.mp3", UriKind.Relative));
             player.Play();
             if (count == 20)
@@ -234,11 +234,19 @@ namespace BTL_WPF
             }
             if (count == 21|| bingo2)
             {
+                player.Close();
                 Bingo4x4 q = new Bingo4x4();
                 q.Show();
                 Close();
-                player.Close();
             }
+        }
+
+        private void click1_Click(object sender, RoutedEventArgs e)
+        {
+            player.Close();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Close();
         }
     }
 }
