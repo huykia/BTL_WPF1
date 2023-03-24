@@ -1,0 +1,19 @@
+﻿<Window x:Class="BTL_WPF.huongdan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BTL_WPF"
+        mc:Ignorable="d"
+        Title="huongdan" Height="250" Width="800" ResizeMode="NoResize">
+    <Grid RenderTransformOrigin="0.515,0.893">
+   
+        <StackPanel Width="800" Height="200" Margin="0,10,0,124" >
+            <TextBlock Text="- Luật chơi:"></TextBlock>
+            <TextBlock  Text =" * Mỗi người chơi sẽ nhận một tấm thẻ lớn (bảng Bingo) với các ô vuông chứa các số ngẫu nhiên."></TextBlock >
+            <TextBlock  Text=" * Người chơi phải quay số theo số lần đã biết trước và tìm ô kết quả tương ứng rồi đánh dấu.Người chơi sẽ thua khi quay hết lượt."></TextBlock>
+            <TextBlock Text =" * Nếu tìm ra được “ 3 ,4 hoặc 5 ” số tạo thành một hàng dọc / ngang / chéo hoặc tìm được 4 điểm ở 4 góc, người chơi sẽ giành chiến thắng."></TextBlock>
+        </StackPanel>
+        <Button  x:Name="click1" Width="60" Height="40" Content="Back" Background="#FF34CC53" FontWeight="Bold" FontSize="20" Click="click1_Click"  />
+    </Grid>
+</Window>

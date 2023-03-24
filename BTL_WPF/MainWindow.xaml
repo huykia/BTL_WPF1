@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BTL_WPF"
         mc:Ignorable="d"
-        Title="BingGo Game" Height="350" Width="450" Background="Aqua">
+        Title="BingGo Game" Height="350" Width="450" Background="Aqua" Icon="/icon.jpg" ResizeMode="NoResize">
     <Grid>
-        <Label Content="BINGO" HorizontalAlignment="Center" Height="51" Margin="0,35,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Center" FontStyle="Italic" FontFamily="Algerian" Width="106">
+   
+        <Label Content="BINGO" HorizontalAlignment="Left" Height="51" Margin="161,35,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Center" FontStyle="Italic" FontFamily="Algerian" Width="106">
         </Label>
-        <Label Content="Chọn màn chơi" HorizontalAlignment="Left" Height="45" Margin="124,104,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Center" FontFamily="Times New Roman"></Label>
-        <Button x:Name="btn1" Content="3X3" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="50,185,0,0" HorizontalContentAlignment="Center" Click="btn1_Click" Background="#FFF91212" FontWeight="Bold"></Button>
-        <Button x:Name="btn2" Content="4X4" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="200,185,0,0" HorizontalContentAlignment="Center" Click="btn2_Click" FontWeight="Bold" Background="#FFF32121"></Button>
-        <Button x:Name="btn3" Content="5X5" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="350,183,0,0" HorizontalContentAlignment="Center" Click="btn3_Click" Background="#FFF72727" FontWeight="Bold"></Button>
-
+        <Label Content="Chọn màn chơi" HorizontalAlignment="Left" Height="45" Margin="113,104,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Center" FontFamily="Times New Roman" ></Label>
+        <Button x:Name="btn1" Content="3X3" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="37,207,0,0" HorizontalContentAlignment="Center" Click="btn1_Click" Background="#FF12F941" FontWeight="Bold" Foreground="#FFF3F3F3" ></Button>
+        <Button x:Name="btn2" Content="4X4" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="187,207,0,0" HorizontalContentAlignment="Center" Click="btn2_Click" FontWeight="Bold" Background="#FF21F33D" Foreground="#FFF7E9E9"></Button>
+        <Button x:Name="btn3" Content="5X5" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="341,207,0,0" HorizontalContentAlignment="Center" Click="btn3_Click" Background="#FF2FE85C" FontWeight="Bold" Foreground="#FFEBEBEB"></Button>
+        <Button  x:Name="click1" Width="70" Height="20" Content="Hướng dẫn" FontWeight="Bold" FontSize="10" Click="click1_Click" Background="#FF4A9BC9" Foreground="#FFF6EFEF"/>
     </Grid>
 </Window>

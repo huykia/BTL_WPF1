@@ -4,7 +4,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Bingo3x3" Height="300" Width="450" Loaded="Window_Loaded" >
+        Title="Bingo3x3" Height="300" Width="450" Loaded="Window_Loaded" ResizeMode="NoResize" >
     <Grid>
         <Grid x:Name="myGrid" Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <TextBlock Text="Random Number :" FontSize="20" Width="170" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="206,15,0,0" FontWeight="Bold" FontStyle="Italic"  ></TextBlock>
@@ -13,6 +13,6 @@
         <Button x:Name="click" Width="70" Height="40" Content="Roll" HorizontalAlignment="Left" VerticalAlignment="Top" Click="click_Click" FontSize="20" Margin="242,160,0,0" Background="#FF28EE2C" FontWeight="Bold"/>
         <TextBlock Text="Count Click :" FontSize="20" Width="122" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="225,50,0,0" FontWeight="Bold"></TextBlock>
         <TextBlock x:Name="tbl1" FontSize="20" Width="50" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="352,50,0,0" FontWeight="Bold"></TextBlock>
-        <Button x:Name="click1" Width="60" Height="40" Content="Back" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FFED4926" Margin="0,0,35,64" FontWeight="Bold" FontSize="20" Click="click1_Click"></Button>
+        <Button x:Name="click1" Width="60" Height="40" Content="Back" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FF2D65CC" Margin="0,0,35,64" FontWeight="Bold" FontSize="20" Click="click1_Click" Foreground="#FFE2D7D7"></Button>
     </Grid>
 </Window>

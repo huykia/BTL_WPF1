@@ -8,7 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="icon.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="img\" />
     <Folder Include="sound\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icon.jpg" />
   </ItemGroup>
 
 </Project>

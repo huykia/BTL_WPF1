@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -43,6 +44,13 @@ namespace BTL_WPF
         {
             Bingo5x5 t = new Bingo5x5();
             t.Show();
+            Close();
+        }
+
+        private void click1_Click(object sender, RoutedEventArgs e)
+        {
+          huongdan huongdan = new huongdan();
+            huongdan.Show();
             Close();
         }
     }
