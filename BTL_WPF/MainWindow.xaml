@@ -5,15 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BTL_WPF"
         mc:Ignorable="d"
-        Title="BingGo Game" Height="350" Width="450" Background="Aqua" Icon="/icon.jpg" ResizeMode="NoResize">
+        Title="BingGo Game" Height="300" Width="450" Background="Aqua" Icon="/icon.jpg" ResizeMode="NoResize">
     <Grid>
-   
-        <Label Content="BINGO" HorizontalAlignment="Left" Height="51" Margin="161,35,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Center" FontStyle="Italic" FontFamily="Algerian" Width="106">
-        </Label>
-        <Label Content="Chọn màn chơi" HorizontalAlignment="Left" Height="45" Margin="113,104,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Center" FontFamily="Times New Roman" ></Label>
-        <Button x:Name="btn1" Content="3X3" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="37,207,0,0" HorizontalContentAlignment="Center" Click="btn1_Click" Background="#FF12F941" FontWeight="Bold" Foreground="#FFF3F3F3" ></Button>
-        <Button x:Name="btn2" Content="4X4" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="187,207,0,0" HorizontalContentAlignment="Center" Click="btn2_Click" FontWeight="Bold" Background="#FF21F33D" Foreground="#FFF7E9E9"></Button>
-        <Button x:Name="btn3" Content="5X5" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="341,207,0,0" HorizontalContentAlignment="Center" Click="btn3_Click" Background="#FF2FE85C" FontWeight="Bold" Foreground="#FFEBEBEB"></Button>
-        <Button  x:Name="click1" Width="70" Height="20" Content="Hướng dẫn" FontWeight="Bold" FontSize="10" Click="click1_Click" Background="#FF4A9BC9" Foreground="#FFF6EFEF"/>
+        <DockPanel LastChildFill="False">
+            <TextBlock DockPanel.Dock="Top" Text="BINGO"  Height="40"  FontSize="30" FontWeight="Bold"  FontStyle="Italic" FontFamily="Algerian" Width="110"></TextBlock>
+            <TextBlock DockPanel.Dock="Top" Text="Chọn màn chơi"  Height="55" Width="210" Padding="10,10,0,0" FontSize="30" FontWeight="Bold"  FontFamily="Times New Roman"  ></TextBlock>
+            <WrapPanel DockPanel.Dock="Top" Width="300" Height="40">
+                <Button x:Name="btn1" Content="3X3" Margin="20,0" Height="40" Width="60" FontSize="30" Click="btn1_Click" Background="Green" FontWeight="Bold" Foreground="#FFF3F3F3" ></Button>
+                <Button x:Name="btn2" Content="4X4" Margin="20,0" Height="40" Width="60" FontSize="30" Click="btn2_Click" FontWeight="Bold" Background="Green" Foreground="#FFF7E9E9" ></Button>
+                <Button x:Name="btn3" Content="5X5" Margin="20,0"  Height="40" Width="60" FontSize="30" Click="btn3_Click" Background="Green" FontWeight="Bold" Foreground="#FFEBEBEB" />
+            </WrapPanel>
+            <TextBlock DockPanel.Dock="Top" Text="Chọn độ khó" Padding="10,10,0,0" Height="50" Width="180"  FontSize="30" FontWeight="Bold"  FontFamily="Times New Roman"  ></TextBlock>
+            <WrapPanel DockPanel.Dock="Top" Width="320" Height="40">
+                <Button x:Name="btn4" Content="Dễ" Height="40"  Width="60" FontSize="30" Click="btn4_Click" Background="Green" FontWeight="Bold" Foreground="#FFF3F3F3" ></Button>
+                <Button x:Name="btn5" Content="Trung bình" Margin="20,0" Height="40" Width="160" FontSize="30" Click="btn5_Click" FontWeight="Bold" Background="Green" Foreground="#FFF7E9E9" ></Button>
+                <Button x:Name="btn6" Content="Khó" Height="40" Width="60" FontSize="30" Click="btn6_Click" Background="Green" FontWeight="Bold" Foreground="#FFEBEBEB" />
+            </WrapPanel>
+            <Button DockPanel.Dock="Bottom" x:Name="click1" Width="70" Height="20" Content="Hướng dẫn" FontWeight="Bold" FontSize="10" Click="click1_Click" Background="#FF4A9BC9" Foreground="#FFF6EFEF"/>
+        </DockPanel>
+
     </Grid>
 </Window>

@@ -5,15 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BTL_WPF"
         mc:Ignorable="d"
-        Title="huongdan" Height="250" Width="800" ResizeMode="NoResize">
-    <Grid RenderTransformOrigin="0.515,0.893">
+        Title="huongdan" Height="350" Width="900" ResizeMode="NoResize">
+    <Grid>
    
-        <StackPanel Width="800" Height="200" Margin="0,10,0,124" >
-            <TextBlock Text="- Luật chơi:"></TextBlock>
-            <TextBlock  Text =" * Mỗi người chơi sẽ nhận một tấm thẻ lớn (bảng Bingo) với các ô vuông chứa các số ngẫu nhiên."></TextBlock >
-            <TextBlock  Text=" * Người chơi phải quay số theo số lần đã biết trước và tìm ô kết quả tương ứng rồi đánh dấu.Người chơi sẽ thua khi quay hết lượt."></TextBlock>
-            <TextBlock Text =" * Nếu tìm ra được “ 3 ,4 hoặc 5 ” số tạo thành một hàng dọc / ngang / chéo hoặc tìm được 4 điểm ở 4 góc, người chơi sẽ giành chiến thắng."></TextBlock>
-        </StackPanel>
-        <Button  x:Name="click1" Width="60" Height="40" Content="Back" Background="#FF34CC53" FontWeight="Bold" FontSize="20" Click="click1_Click"  />
+        <DockPanel LastChildFill="False" >
+            <TextBlock DockPanel.Dock="Top" Text ="- Luật chơi:" FontSize="30"></TextBlock>
+            <WrapPanel DockPanel.Dock="Top">
+                <TextBlock Height="30" Width="900" Text ="  * Mỗi người chơi sẽ nhận một tấm thẻ lớn (bảng Bingo) với các ô vuông chứa các số ngẫu nhiên." FontSize="20"></TextBlock >
+                <TextBlock Height="30" Width="900" Text ="  * Người chơi phải quay số theo số lần đã biết trước và tìm ô kết quả tương ứng rồi đánh dấu." FontSize="20"></TextBlock>
+                <TextBlock Height="30" Width="900" Text ="  * Người chơi sẽ thua khi quay hết lượt." FontSize="20"></TextBlock>
+                <TextBlock Height="30" Width="900" Text ="  * Nếu tìm ra được “ 3 ,4 hoặc 5 ” số tạo thành một hàng dọc / ngang / chéo." FontSize="20"></TextBlock>
+                <TextBlock Height="30" Width="900" Text ="  * Người chơi sẽ giành chiến thắng." FontSize="20"></TextBlock>
+            </WrapPanel>
+            <Button DockPanel.Dock="Bottom"  x:Name="click1" Width="60" Height="40" Content="Back" Background="#FF34CC53" FontWeight="Bold" FontSize="20" Click="click1_Click"  />
+        </DockPanel>
+       
     </Grid>
 </Window>

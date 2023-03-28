@@ -1,19 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Media;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-
+using BTL_WPF;
 namespace BTL_WPF
 {
     /// <summary>
@@ -21,11 +11,32 @@ namespace BTL_WPF
     /// </summary>
     public partial class Bingo3x3 : Window
     {
-
-        int count = 11;
+        
+        int count;
         bool bingo = false;
         bool bingo2 = false;
+        int lever;
+        int lever1;
         public Bingo3x3() => InitializeComponent();
+        public Bingo3x3(int Lever) : this()
+        {
+            lever = Lever;
+            if (lever == 1)
+            { tbl4.Text = "Dễ";
+                count = 6;
+                lever1 = 9;
+            }
+            if (lever == 2)
+            { tbl4.Text = "Trung bình";
+                count = 11;
+                lever1 = 18;
+            }
+            if (lever == 3)
+            { tbl4.Text = "Khó";
+                count = 16;
+                lever1 = 32;
+            }
+        }
         MediaPlayer player = new MediaPlayer();
         private List<List<Button>> matrix;
         public List<List<Button>> Matrix
@@ -35,10 +46,11 @@ namespace BTL_WPF
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+
             // Set the number of rows and columns
             int rows = 3;
             int columns = 3;
-
+         
             // Create the rows and columns
             for (int i = 0; i < rows; i++)
             {
@@ -55,7 +67,7 @@ namespace BTL_WPF
                 Matrix.Add(new List<Button>());
                 for (int col = 0; col < columns; col++)
                 {
-                    int n = new Random().Next(0, 10);
+                    int n = new Random().Next(0, lever1);
                     Button myButton = new Button();
                     myButton.Content = n;
                     myButton.FontWeight = FontWeights.Bold;
@@ -234,7 +246,7 @@ namespace BTL_WPF
         {
             count--;
             tbl1.Text = count.ToString();
-            int n = new Random().Next(0, 10);
+            int n = new Random().Next(0, lever1);
             tbl2.Text = n.ToString();
             player.Close();
             player.Open(new Uri("C:\\Users\\huyng\\Documents\\Bt\\BTL_WPF\\BTL_WPF\\sound\\Tieng-lac-xuc-xac.mp3", UriKind.Relative));

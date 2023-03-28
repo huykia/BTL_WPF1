@@ -9,10 +9,12 @@
         <Grid x:Name="myGrid" Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <TextBlock Text="Random Number :" FontSize="20" Width="170" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="206,15,0,0" FontWeight="Bold" FontStyle="Italic"  ></TextBlock>
         <TextBlock x:Name="tbl2" FontSize="20" Width="50" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="390,15,0,0" FontWeight="Bold" FontStyle="Italic" ></TextBlock>
-        <TextBlock x:Name="tbl3" FontSize="20" Width="143" FontWeight="Bold" Height="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="242,92,0,0"  ></TextBlock>
-        <Button x:Name="click" Width="70" Height="40" Content="Roll" HorizontalAlignment="Left" VerticalAlignment="Top" Click="click_Click" FontSize="20" Margin="242,160,0,0" Background="#FF28EE2C" FontWeight="Bold"/>
-        <TextBlock Text="Count Click :" FontSize="20" Width="122" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="225,50,0,0" FontWeight="Bold"></TextBlock>
-        <TextBlock x:Name="tbl1" FontSize="20" Width="50" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="352,50,0,0" FontWeight="Bold"></TextBlock>
-        <Button x:Name="click1" Width="60" Height="40" Content="Back" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FF2D65CC" Margin="0,0,35,64" FontWeight="Bold" FontSize="20" Click="click1_Click" Foreground="#FFE2D7D7"></Button>
+        <TextBlock x:Name="tbl3" FontSize="20" Width="143" FontWeight="Bold" Height="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="242,85,0,0"  ></TextBlock>
+        <Button x:Name="click" Width="70" Height="40" Content="Roll" HorizontalAlignment="Left" VerticalAlignment="Top" Click="click_Click" FontSize="20" Margin="257,202,0,0" Background="#FF28EE2C" FontWeight="Bold"/>
+        <TextBlock Text="Count Click :" FontSize="20" Width="122" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206,50,0,0" FontWeight="Bold"></TextBlock>
+        <TextBlock x:Name="tbl1" FontSize="20" Width="50" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="328,50,0,0" FontWeight="Bold"></TextBlock>
+        <TextBlock Text="Mức độ:" FontSize="20" Width="76" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="210,140,0,0" FontWeight="Bold" FontStyle="Italic" ></TextBlock>
+        <TextBlock x:Name="tbl4"  FontSize="20" Width="110" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="286,140,0,0" FontWeight="Bold" FontStyle="Italic" ></TextBlock>
+        <Button x:Name="click1" Width="60" Height="40" Content="Back" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FF2D65CC" FontWeight="Bold" FontSize="20" Click="click1_Click" Foreground="#FFE2D7D7" Margin="0,0,5,4"/>
     </Grid>
 </Window>

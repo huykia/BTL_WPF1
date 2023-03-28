@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -20,10 +21,31 @@ namespace BTL_WPF
     /// </summary>
     public partial class Bingo5x5 : Window
     {
-        int count = 21;
+        int count;
         bool bingo = false;
         bool bingo2 = false;
+        int lever;
+        int lever1;
         public Bingo5x5() => InitializeComponent();
+        public Bingo5x5(int Lever) : this()
+        {
+            lever = Lever;
+            if (lever == 1)
+            { tbl4.Text = "Dễ";
+                count = 16;
+                lever1 = 25;
+            }
+            if (lever == 2)
+            { tbl4.Text = "Trung bình";
+                count = 21;
+                lever1 = 50;
+            }
+            if (lever == 3)
+            { tbl4.Text = "Khó";
+                count = 26;
+                lever1 = 99;
+            }
+        }
         MediaPlayer player = new MediaPlayer();
         private List<List<Button>> matrix;
         public List<List<Button>> Matrix
@@ -53,7 +75,7 @@ namespace BTL_WPF
                 Matrix.Add(new List<Button>());
                 for (int col = 0; col < columns; col++)
                 {
-                    int n = new Random().Next(0, 10);
+                    int n = new Random().Next(0, lever1);
                     Button myButton = new Button();
                     myButton.Content = n;
                     Grid.SetRow(myButton, row);
@@ -232,7 +254,7 @@ namespace BTL_WPF
         {
             count--;
             tbl1.Text = count.ToString();
-            int n = new Random().Next(0, 10);
+            int n = new Random().Next(0, lever1);
             tbl2.Text = n.ToString();
             player.Close();
             
