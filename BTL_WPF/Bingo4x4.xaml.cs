@@ -261,7 +261,7 @@ namespace BTL_WPF
             {
   
                 player.Close();
-                Bingo4x4 q = new Bingo4x4();
+                Bingo4x4 q = new Bingo4x4(lever);
                 q.Show();
                 Close();
             }

@@ -262,7 +262,7 @@ namespace BTL_WPF
             if (count < 0 || bingo2)
             {
                 player.Close();
-                Bingo3x3 q = new Bingo3x3();
+                Bingo3x3 q = new Bingo3x3(lever);
                 q.Show();
                 Close();
                 
