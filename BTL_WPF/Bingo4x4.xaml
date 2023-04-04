@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BTL_WPF"
         mc:Ignorable="d"
-       Title="Bingo4x4" Height="300" Width="450" Loaded="Window_Loaded" ResizeMode="NoResize" >
+       Title="Bingo4x4" Height="300" Width="450" Loaded="Window_Loaded" Icon="/icon.jpg" ResizeMode="NoResize" >
     <Grid>
         <Grid x:Name="myGrid" Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <TextBlock Text="Random Number :" FontSize="20" Width="170" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="221,10,0,0" FontWeight="Bold" FontStyle="Italic"  ></TextBlock>

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Media;
 
 namespace BTL_WPF
@@ -10,11 +11,13 @@ namespace BTL_WPF
     {
         int manchoi;
         int lever;
+        MediaPlayer player = new MediaPlayer();
 
-   
         public MainWindow()
         {
             InitializeComponent();
+            player.Open(new Uri("C:\\Users\\huyng\\Documents\\Bt\\BTL_WPF\\BTL_WPF\\sound\\Nhac-chuong-khai-mac.mp3", UriKind.Relative));
+            player.Play();
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
@@ -47,11 +50,13 @@ namespace BTL_WPF
         {
             huongdan huongdan = new huongdan();
             huongdan.Show();
+            player.Close();
             Close();
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
+            player.Close();
             lever = 1;
             if (manchoi == 1)
             {
@@ -75,6 +80,7 @@ namespace BTL_WPF
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
+            player.Close();
             lever = 2;
             if (manchoi == 1)
             {
@@ -98,6 +104,7 @@ namespace BTL_WPF
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
+            player.Close();
             lever = 3;
             if (manchoi == 1)
             {

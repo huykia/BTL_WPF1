@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BTL_WPF"
         mc:Ignorable="d"
-        Title="huongdan" Height="350" Width="900" ResizeMode="NoResize">
+        Title="huongdan" Height="350" Width="900" Icon="/icon.jpg" ResizeMode="NoResize">
     <Grid>
    
         <DockPanel LastChildFill="False" >
